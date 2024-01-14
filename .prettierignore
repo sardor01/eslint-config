@@ -70,3 +70,5 @@ dist
 
 # IDE
 .idea
+
+pnpm-lock.yaml

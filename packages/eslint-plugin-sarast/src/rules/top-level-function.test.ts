@@ -1,5 +1,5 @@
-import { RuleTester } from '@typescript-eslint/rule-tester'
-import rule, { RULE_NAME } from './top-level-function'
+import { RuleTester } from '@typescript-eslint/rule-tester';
+import rule, { RULE_NAME } from './top-level-function';
 
 const valids = [
   'function foo() {}',
@@ -21,13 +21,10 @@ const valids = [
   'const foo = async (x, y) => x + y',
   'const foo = () => String(123)',
   'const foo = () => ({})',
-]
+];
 
 const invalids = [
-  [
-    'const foo = (x, y) => \nx + y',
-    'function foo (x, y) {\n  return x + y\n}',
-  ],
+  ['const foo = (x, y) => \nx + y', 'function foo (x, y) {\n  return x + y\n}'],
   [
     'const foo = (as: string, bar: number) => { return as + bar }',
     'function foo (as: string, bar: number) { return as + bar }',
@@ -36,29 +33,20 @@ const invalids = [
     'const foo = <K, T extends Boolean>(as: string, bar: number): Omit<T, K> => \nas + bar',
     'function foo <K, T extends Boolean>(as: string, bar: number): Omit<T, K> {\n  return as + bar\n}',
   ],
-  [
-    'export const foo = () => {}',
-    'export function foo () {}',
-  ],
-  [
-    'export const foo = () => \n({})',
-    'export function foo () {\n  return {}\n}',
-  ],
-  [
-    'export const foo = async () => \n({})',
-    'export async function foo () {\n  return {}\n}',
-  ],
-]
+  ['export const foo = () => {}', 'export function foo () {}'],
+  ['export const foo = () => \n({})', 'export function foo () {\n  return {}\n}'],
+  ['export const foo = async () => \n({})', 'export async function foo () {\n  return {}\n}'],
+];
 
 const ruleTester: RuleTester = new RuleTester({
   parser: require.resolve('@typescript-eslint/parser'),
-})
+});
 
 ruleTester.run(RULE_NAME, rule as any, {
   valid: valids,
-  invalid: invalids.map(i => ({
+  invalid: invalids.map((i) => ({
     code: i[0],
     output: i[1],
     errors: [{ messageId: 'topLevelFunctionDeclaration' }],
   })),
-})
+});

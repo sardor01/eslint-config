@@ -43,7 +43,7 @@ Add the following settings to your `settings.json`:
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
-    "source.organizeImports": false
+    "source.organizeImports": false,
   },
 
   // The following is optional.
@@ -60,8 +60,8 @@ Add the following settings to your `settings.json`:
     "markdown",
     "json",
     "jsonc",
-    "yaml"
-  ]
+    "yaml",
+  ],
 }
 ```
 
@@ -71,13 +71,13 @@ Type aware rules are enabled when a `tsconfig.eslint.json` is found in the proje
 
 ```js
 // .eslintrc.js
-const process = require('node:process')
+const process = require('node:process');
 
-process.env.ESLINT_TSCONFIG = 'tsconfig.json'
+process.env.ESLINT_TSCONFIG = 'tsconfig.json';
 
 module.exports = {
-  extends: '@sarast'
-}
+  extends: '@sarast',
+};
 ```
 
 ### Lint Staged

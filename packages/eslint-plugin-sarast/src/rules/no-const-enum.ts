@@ -1,8 +1,8 @@
-import { createEslintRule } from '../utils'
+import { createEslintRule } from '../utils';
 
-export const RULE_NAME = 'no-const-enum'
-export type MessageIds = 'noConstEnum'
-export type Options = []
+export const RULE_NAME = 'no-const-enum';
+export type MessageIds = 'noConstEnum';
+export type Options = [];
 
 export default createEslintRule<Options, MessageIds>({
   name: RULE_NAME,
@@ -25,9 +25,9 @@ export default createEslintRule<Options, MessageIds>({
           context.report({
             node,
             messageId: 'noConstEnum',
-          })
+          });
         }
       },
-    }
+    };
   },
-})
+});

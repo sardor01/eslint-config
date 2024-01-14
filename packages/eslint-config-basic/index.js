@@ -1,6 +1,6 @@
 // eslint-disable-next-line n/prefer-global/process
-const isInEditor = (process.env.VSCODE_PID || process.env.JETBRAINS_IDE) && !process.env.CI
-const offInEditor = isInEditor ? 'off' : 'error'
+const isInEditor = (process.env.VSCODE_PID || process.env.JETBRAINS_IDE) && !process.env.CI;
+const offInEditor = isInEditor ? 'off' : 'error';
 
 module.exports = {
   env: {
@@ -50,14 +50,7 @@ module.exports = {
     // force exclude
     '**/.vitepress/cache',
   ],
-  plugins: [
-    'html',
-    'unicorn',
-    'sarast',
-    'no-only-tests',
-    'unused-imports',
-    'jsdoc',
-  ],
+  plugins: ['html', 'unicorn', 'sarast', 'no-only-tests', 'unused-imports', 'jsdoc'],
   settings: {
     'import/resolver': {
       node: { extensions: ['.js', '.mjs'] },
@@ -154,12 +147,7 @@ module.exports = {
           },
           {
             pathPattern: '^exports.*$',
-            order: [
-              'types',
-              'import',
-              'require',
-              'default',
-            ],
+            order: ['types', 'import', 'require', 'default'],
           },
         ],
       },
@@ -236,9 +224,9 @@ module.exports = {
     'import/named': 'off',
 
     // Common
-    'semi': ['error', 'never'],
-    'curly': ['error', 'multi-or-nest', 'consistent'],
-    'quotes': ['error', 'single'],
+    semi: ['error', 'never'],
+    curly: ['error', 'multi-or-nest', 'consistent'],
+    quotes: ['error', 'single'],
     'quote-props': ['error', 'consistent-as-needed'],
 
     'unused-imports/no-unused-imports': offInEditor,
@@ -251,7 +239,7 @@ module.exports = {
     'array-bracket-spacing': ['error', 'never'],
     'brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
     'block-spacing': ['error', 'always'],
-    'camelcase': 'off',
+    camelcase: 'off',
     'comma-spacing': ['error', { before: false, after: true }],
     'comma-style': ['error', 'last'],
     'comma-dangle': ['error', 'always-multiline'],
@@ -261,13 +249,8 @@ module.exports = {
     'no-cond-assign': ['error', 'always'],
     'func-call-spacing': 'off',
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
-    'indent': ['error', 2, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
-    'no-restricted-syntax': [
-      'error',
-      'DebuggerStatement',
-      'LabeledStatement',
-      'WithStatement',
-    ],
+    indent: ['error', 2, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
+    'no-restricted-syntax': ['error', 'DebuggerStatement', 'LabeledStatement', 'WithStatement'],
     'object-curly-spacing': ['error', 'always'],
     'no-return-await': 'off',
     'space-before-function-paren': [
@@ -323,24 +306,28 @@ module.exports = {
     'template-curly-spacing': 'error',
     'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
     'generator-star-spacing': 'off',
-    'spaced-comment': ['error', 'always', {
-      line: {
-        markers: ['/'],
-        exceptions: ['/', '#'],
+    'spaced-comment': [
+      'error',
+      'always',
+      {
+        line: {
+          markers: ['/'],
+          exceptions: ['/', '#'],
+        },
+        block: {
+          markers: ['!'],
+          exceptions: ['*'],
+          balanced: true,
+        },
       },
-      block: {
-        markers: ['!'],
-        exceptions: ['*'],
-        balanced: true,
-      },
-    }],
+    ],
 
     // best-practice
     'array-callback-return': 'error',
     'block-scoped-var': 'error',
     'consistent-return': 'off',
-    'complexity': 'off',
-    'eqeqeq': ['error', 'smart'],
+    complexity: 'off',
+    eqeqeq: ['error', 'smart'],
     'no-alert': 'warn',
     'no-case-declarations': 'error',
     'no-multi-spaces': 'error',
@@ -427,8 +414,7 @@ module.exports = {
 
     // sarast
     'sarast/no-import-node-modules-by-path': 'error',
-    'sarast/if-newline': 'error',
     'sarast/import-dedupe': 'error',
     'sarast/top-level-function': 'error',
   },
-}
+};

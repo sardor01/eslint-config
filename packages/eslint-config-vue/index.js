@@ -1,9 +1,8 @@
-const { isPackageExists } = require('local-pkg')
+const { isPackageExists } = require('local-pkg');
 
-const TS = isPackageExists('typescript')
+const TS = isPackageExists('typescript');
 
-if (!TS)
-  console.warn('[@sarast/eslint-config] TypeScript is not installed, fallback to JS only.')
+if (!TS) console.warn('[@sarast/eslint-config] TypeScript is not installed, fallback to JS only.');
 
 module.exports = {
   overrides: [
@@ -16,18 +15,11 @@ module.exports = {
       rules: {
         'no-unused-vars': 'off',
         'no-undef': 'off',
-        ...(TS
-          ? { '@typescript-eslint/no-unused-vars': 'off' }
-          : null),
+        ...(TS ? { '@typescript-eslint/no-unused-vars': 'off' } : null),
       },
     },
   ],
-  extends: [
-    'plugin:vue/vue3-recommended',
-    TS
-      ? '@sarast/eslint-config-ts'
-      : '@sarast/eslint-config-basic',
-  ],
+  extends: ['plugin:vue/vue3-recommended', TS ? '@sarast/eslint-config-ts' : '@sarast/eslint-config-basic'],
   rules: {
     'vue/max-attributes-per-line': 'off',
     'vue/no-v-html': 'off',
@@ -41,22 +33,35 @@ module.exports = {
     // reactivity transform
     'vue/no-setup-props-reactivity-loss': 'off',
 
-    'vue/block-order': ['error', {
-      order: ['script', 'template', 'style'],
-    }],
-    'vue/block-tag-newline': ['error', {
-      singleline: 'always',
-      multiline: 'always',
-    }],
+    'vue/block-order': [
+      'error',
+      {
+        order: ['script', 'template', 'style'],
+      },
+    ],
+    'vue/block-tag-newline': [
+      'error',
+      {
+        singleline: 'always',
+        multiline: 'always',
+      },
+    ],
     'vue/component-name-in-template-casing': ['error', 'PascalCase'],
     'vue/component-options-name-casing': ['error', 'PascalCase'],
     'vue/custom-event-name-casing': ['error', 'camelCase'],
-    'vue/define-macros-order': ['error', {
-      order: ['defineOptions', 'defineProps', 'defineEmits', 'defineSlots'],
-    }],
-    'vue/html-comment-content-spacing': ['error', 'always', {
-      exceptions: ['-'],
-    }],
+    'vue/define-macros-order': [
+      'error',
+      {
+        order: ['defineOptions', 'defineProps', 'defineEmits', 'defineSlots'],
+      },
+    ],
+    'vue/html-comment-content-spacing': [
+      'error',
+      'always',
+      {
+        exceptions: ['-'],
+      },
+    ],
     'vue/no-restricted-v-bind': ['error', '/^v-/'],
     'vue/no-useless-v-bind': 'error',
     'vue/no-unused-refs': 'error',
@@ -82,12 +87,7 @@ module.exports = {
     'vue/no-extra-parens': ['error', 'functions'],
     'vue/no-irregular-whitespace': 'error',
     'vue/no-loss-of-precision': 'error',
-    'vue/no-restricted-syntax': [
-      'error',
-      'DebuggerStatement',
-      'LabeledStatement',
-      'WithStatement',
-    ],
+    'vue/no-restricted-syntax': ['error', 'DebuggerStatement', 'LabeledStatement', 'WithStatement'],
     'vue/no-sparse-arrays': 'error',
     'vue/object-curly-newline': ['error', { multiline: true, consistent: true }],
     'vue/object-curly-spacing': ['error', 'always'],
@@ -108,4 +108,4 @@ module.exports = {
     'vue/space-unary-ops': ['error', { words: true, nonwords: false }],
     'vue/template-curly-spacing': 'error',
   },
-}
+};

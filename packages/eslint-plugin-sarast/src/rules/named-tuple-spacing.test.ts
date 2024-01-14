@@ -1,5 +1,5 @@
-import { RuleTester } from '@typescript-eslint/rule-tester'
-import rule, { RULE_NAME } from './named-tuple-spacing'
+import { RuleTester } from '@typescript-eslint/rule-tester';
+import rule, { RULE_NAME } from './named-tuple-spacing';
 
 const valids = [
   'type T = [i: number]',
@@ -10,11 +10,11 @@ const valids = [
     change: [id: number]
     update: [value: string]
   }>()`,
-]
+];
 
 const ruleTester: RuleTester = new RuleTester({
   parser: require.resolve('@typescript-eslint/parser'),
-})
+});
 
 ruleTester.run(RULE_NAME, rule as any, {
   valid: valids,
@@ -92,7 +92,11 @@ ruleTester.run(RULE_NAME, rule as any, {
           update: [value: string]
         }>()
         `,
-      errors: [{ messageId: 'unexpectedSpaceBetween' }, { messageId: 'expectedSpaceAfter' }, { messageId: 'expectedSpaceAfter' }],
+      errors: [
+        { messageId: 'unexpectedSpaceBetween' },
+        { messageId: 'expectedSpaceAfter' },
+        { messageId: 'expectedSpaceAfter' },
+      ],
     },
   ],
-})
+});
