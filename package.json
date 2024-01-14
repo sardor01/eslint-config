@@ -8,7 +8,7 @@
     "test": "pnpm -r run test",
     "build": "pnpm -r run build",
     "prepare": "pnpm -r run stub",
-    "release": "bumpp -r && pnpm -r publish"
+    "release": "bumpp -r && pnpm -r publish --access public"
   },
   "devDependencies": {
     "@sarast/eslint-config": "workspace:*",
