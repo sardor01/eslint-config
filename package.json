@@ -12,10 +12,10 @@
   },
   "devDependencies": {
     "@sarast/eslint-config": "workspace:*",
-    "bumpp": "^9.2.1",
-    "eslint": "^8.56.0",
+    "bumpp": "9.2.1",
+    "eslint": "8.56.0",
     "eslint-plugin-sarast": "link:./packages/eslint-plugin-sarast",
-    "rimraf": "^5.0.5",
-    "typescript": "^5.3.3"
+    "rimraf": "5.0.5",
+    "typescript": "5.3.3"
   }
 }

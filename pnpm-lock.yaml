@@ -12,19 +12,19 @@ importers:
         specifier: workspace:*
         version: link:packages/eslint-config
       bumpp:
-        specifier: ^9.2.1
+        specifier: 9.2.1
         version: 9.2.1
       eslint:
-        specifier: ^8.56.0
+        specifier: 8.56.0
         version: 8.56.0
       eslint-plugin-sarast:
         specifier: link:./packages/eslint-plugin-sarast
         version: link:packages/eslint-plugin-sarast
       rimraf:
-        specifier: ^5.0.5
+        specifier: 5.0.5
         version: 5.0.5
       typescript:
-        specifier: ^5.3.3
+        specifier: 5.3.3
         version: 5.3.3
 
   packages/eslint-config:
@@ -33,99 +33,99 @@ importers:
         specifier: workspace:*
         version: link:../eslint-config-vue
       '@typescript-eslint/eslint-plugin':
-        specifier: ^6.7.0
+        specifier: 6.18.1
         version: 6.18.1(@typescript-eslint/parser@6.18.1)(eslint@8.56.0)(typescript@5.3.3)
       '@typescript-eslint/parser':
-        specifier: ^6.7.0
+        specifier: 6.18.1
         version: 6.18.1(eslint@8.56.0)(typescript@5.3.3)
       eslint-plugin-eslint-comments:
-        specifier: ^3.2.0
+        specifier: 3.2.0
         version: 3.2.0(eslint@8.56.0)
       eslint-plugin-html:
-        specifier: ^7.1.0
+        specifier: 7.1.0
         version: 7.1.0
       eslint-plugin-import:
         specifier: npm:eslint-plugin-i@2.29.1
         version: /eslint-plugin-i@2.29.1(@typescript-eslint/parser@6.18.1)(eslint@8.56.0)
       eslint-plugin-jsonc:
-        specifier: ^2.9.0
+        specifier: 2.11.2
         version: 2.11.2(eslint@8.56.0)
       eslint-plugin-n:
-        specifier: ^16.1.0
+        specifier: 16.6.2
         version: 16.6.2(eslint@8.56.0)
       eslint-plugin-promise:
-        specifier: ^6.1.1
+        specifier: 6.1.1
         version: 6.1.1(eslint@8.56.0)
       eslint-plugin-unicorn:
-        specifier: ^50.0.1
+        specifier: 50.0.1
         version: 50.0.1(eslint@8.56.0)
       eslint-plugin-vue:
-        specifier: ^9.17.0
+        specifier: 9.20.1
         version: 9.20.1(eslint@8.56.0)
       eslint-plugin-yml:
-        specifier: ^1.9.0
+        specifier: 1.11.0
         version: 1.11.0(eslint@8.56.0)
       jsonc-eslint-parser:
-        specifier: ^2.3.0
+        specifier: 2.4.0
         version: 2.4.0
       yaml-eslint-parser:
-        specifier: ^1.2.2
+        specifier: 1.2.2
         version: 1.2.2
     devDependencies:
       eslint:
-        specifier: ^8.49.0
+        specifier: 8.56.0
         version: 8.56.0
 
   packages/eslint-config-basic:
     dependencies:
       eslint-plugin-eslint-comments:
-        specifier: ^3.2.0
+        specifier: 3.2.0
         version: 3.2.0(eslint@8.56.0)
       eslint-plugin-html:
-        specifier: ^7.1.0
+        specifier: 7.1.0
         version: 7.1.0
       eslint-plugin-import:
         specifier: npm:eslint-plugin-i@2.29.1
         version: /eslint-plugin-i@2.29.1(@typescript-eslint/parser@6.18.1)(eslint@8.56.0)
       eslint-plugin-jsdoc:
-        specifier: ^48.0.2
+        specifier: 48.0.2
         version: 48.0.2(eslint@8.56.0)
       eslint-plugin-jsonc:
-        specifier: ^2.9.0
+        specifier: 2.11.2
         version: 2.11.2(eslint@8.56.0)
       eslint-plugin-markdown:
-        specifier: ^3.0.1
+        specifier: 3.0.1
         version: 3.0.1(eslint@8.56.0)
       eslint-plugin-n:
-        specifier: ^16.1.0
+        specifier: 16.6.2
         version: 16.6.2(eslint@8.56.0)
       eslint-plugin-no-only-tests:
-        specifier: ^3.1.0
+        specifier: 3.1.0
         version: 3.1.0
       eslint-plugin-promise:
-        specifier: ^6.1.1
+        specifier: 6.1.1
         version: 6.1.1(eslint@8.56.0)
       eslint-plugin-sarast:
         specifier: workspace:*
         version: link:../eslint-plugin-sarast
       eslint-plugin-unicorn:
-        specifier: ^50.0.1
+        specifier: 50.0.1
         version: 50.0.1(eslint@8.56.0)
       eslint-plugin-unused-imports:
-        specifier: ^3.0.0
+        specifier: 3.0.0
         version: 3.0.0(eslint@8.56.0)
       eslint-plugin-yml:
-        specifier: ^1.9.0
+        specifier: 1.11.0
         version: 1.11.0(eslint@8.56.0)
       jsonc-eslint-parser:
-        specifier: ^2.3.0
+        specifier: 2.4.0
         version: 2.4.0
       yaml-eslint-parser:
-        specifier: ^1.2.2
+        specifier: 1.2.2
         version: 1.2.2
     devDependencies:
       eslint:
-        specifier: ^8.49.0
+        specifier: 8.56.0
         version: 8.56.0
 
   packages/eslint-config-react:
@@ -134,20 +134,20 @@ importers:
         specifier: workspace:*
         version: link:../eslint-config-ts
       eslint-plugin-react:
-        specifier: ^7.33.2
+        specifier: 7.33.2
         version: 7.33.2(eslint@8.56.0)
       eslint-plugin-react-hooks:
-        specifier: ^4.6.0
+        specifier: 4.6.0
         version: 4.6.0(eslint@8.56.0)
     devDependencies:
       eslint:
-        specifier: ^8.49.0
+        specifier: 8.56.0
         version: 8.56.0
       react:
-        specifier: ^18.2.0
+        specifier: 18.2.0
         version: 18.2.0
       typescript:
-        specifier: ^5.2.2
+        specifier: 5.3.3
         version: 5.3.3
 
   packages/eslint-config-ts:
@@ -156,20 +156,20 @@ importers:
         specifier: workspace:*
         version: link:../eslint-config-basic
       '@typescript-eslint/eslint-plugin':
-        specifier: ^6.7.0
+        specifier: 6.18.1
         version: 6.18.1(@typescript-eslint/parser@6.18.1)(eslint@8.56.0)(typescript@5.3.3)
       '@typescript-eslint/parser':
-        specifier: ^6.7.0
+        specifier: 6.18.1
         version: 6.18.1(eslint@8.56.0)(typescript@5.3.3)
       eslint-plugin-jest:
-        specifier: ^27.2.3
+        specifier: 27.6.3
         version: 27.6.3(@typescript-eslint/eslint-plugin@6.18.1)(eslint@8.56.0)(typescript@5.3.3)
       typescript:
-        specifier: '>=3.9'
+        specifier: '>=5.3.3'
         version: 5.3.3
     devDependencies:
       eslint:
-        specifier: ^8.49.0
+        specifier: 8.56.0
         version: 8.56.0
 
   packages/eslint-config-vue:
@@ -181,33 +181,33 @@ importers:
         specifier: workspace:*
         version: link:../eslint-config-ts
       eslint-plugin-vue:
-        specifier: ^9.17.0
+        specifier: 9.20.1
         version: 9.20.1(eslint@8.56.0)
       local-pkg:
-        specifier: ^0.5.0
+        specifier: 0.5.0
         version: 0.5.0
     devDependencies:
       eslint:
-        specifier: ^8.49.0
+        specifier: 8.56.0
         version: 8.56.0
 
   packages/eslint-plugin-sarast:
     dependencies:
       '@typescript-eslint/utils':
-        specifier: ^6.7.0
+        specifier: 6.18.1
         version: 6.18.1(eslint@8.56.0)(typescript@5.3.3)
     devDependencies:
       '@types/node':
-        specifier: ^20.6.0
+        specifier: 20.11.0
         version: 20.11.0
       '@typescript-eslint/rule-tester':
-        specifier: ^6.7.0
+        specifier: 6.18.1
         version: 6.18.1(@eslint/eslintrc@3.0.0)(eslint@8.56.0)(typescript@5.3.3)
       unbuild:
-        specifier: ^2.0.0
+        specifier: 2.0.0
         version: 2.0.0(typescript@5.3.3)
       vitest:
-        specifier: ^1.2.0
+        specifier: 1.2.0
         version: 1.2.0(@types/node@20.11.0)
 
 packages:
