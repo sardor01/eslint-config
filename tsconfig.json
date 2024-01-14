@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "es2020",
+    "moduleResolution": "Bundler",
+    "baseUrl": ".",
+    "esModuleInterop": true
+  },
+  "include": [
+    "./packages/**/*.ts"
+  ],
+  "exclude": [
+    "./fixtures/**/*.*"
+  ]
+}
