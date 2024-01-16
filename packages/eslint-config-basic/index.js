@@ -206,8 +206,6 @@ module.exports = {
         'no-undef': 'off',
         'no-unused-expressions': 'off',
         'no-unused-vars': 'off',
-        'sarast/no-cjs-exports': 'off',
-        'sarast/no-ts-export-equal': 'off',
         'n/prefer-global/process': 'off',
       },
     },
@@ -413,8 +411,7 @@ module.exports = {
     'jsdoc/require-throws': 'off',
 
     // sarast
+    'sarast/no-import-dist': 'error',
     'sarast/no-import-node-modules-by-path': 'error',
-    'sarast/import-dedupe': 'error',
-    'sarast/top-level-function': 'error',
   },
 };
