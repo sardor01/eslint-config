@@ -1,6 +1,6 @@
 {
   "name": "@sarast/eslint-config-vue",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "homepage": "https://github.com/sardor01/eslint-config",
   "keywords": [
