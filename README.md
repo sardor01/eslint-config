@@ -43,7 +43,7 @@ Add the following settings to your `settings.json`:
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
-    "source.organizeImports": false
+    "source.organizeImports": false,
   },
 
   // The following is optional.
@@ -60,8 +60,8 @@ Add the following settings to your `settings.json`:
     "markdown",
     "json",
     "jsonc",
-    "yaml"
-  ]
+    "yaml",
+  ],
 }
 ```
 
