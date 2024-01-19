@@ -7,6 +7,7 @@
     "prepare": "pnpm -r run stub",
     "lint": "pnpm prepare && eslint . --fix",
     "format": "pnpm prepare && prettier --write .",
+    "typecheck": "pnpm -r run typecheck",
     "test": "pnpm -r run test",
     "build": "pnpm -r run build",
     "release": "bumpp -r && pnpm -r publish --access public"
