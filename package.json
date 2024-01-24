@@ -2,7 +2,7 @@
   "name": "@sarast/eslint-config-monorepo",
   "version": "0.0.7",
   "private": true,
-  "packageManager": "pnpm@8.14.1",
+  "packageManager": "pnpm@8.14.3",
   "scripts": {
     "prepare": "pnpm -r run stub",
     "lint": "pnpm prepare && eslint . --fix",
