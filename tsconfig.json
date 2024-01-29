@@ -5,6 +5,7 @@
     "moduleResolution": "Bundler",
     "baseUrl": ".",
     "esModuleInterop": true,
+    "skipLibCheck": true,
   },
   "include": ["./packages/**/*.ts"],
 }
