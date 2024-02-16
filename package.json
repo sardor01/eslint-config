@@ -2,7 +2,7 @@
   "name": "@sarast/eslint-config-monorepo",
   "version": "0.0.8",
   "private": true,
-  "packageManager": "pnpm@8.15.0",
+  "packageManager": "pnpm@8.15.3",
   "scripts": {
     "prepare": "pnpm -r run stub",
     "lint": "pnpm prepare && eslint . --fix",
@@ -19,7 +19,7 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "5.1.3",
     "eslint-plugin-sarast": "link:./packages/eslint-plugin-sarast",
-    "prettier": "3.2.4",
+    "prettier": "3.2.5",
     "rimraf": "5.0.5",
     "typescript": "5.3.3"
   }
