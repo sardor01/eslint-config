@@ -16,11 +16,11 @@
   },
   "dependencies": {
     "@sarast/eslint-config-basic": "workspace:*",
-    "@typescript-eslint/eslint-plugin": "7.0.1",
-    "@typescript-eslint/parser": "7.0.1",
-    "eslint-plugin-jest": "27.8.0"
+    "@typescript-eslint/eslint-plugin": "7.1.1",
+    "@typescript-eslint/parser": "7.1.1",
+    "eslint-plugin-jest": "27.9.0"
   },
   "devDependencies": {
-    "eslint": "8.56.0"
+    "eslint": "8.57.0"
   }
 }
