@@ -17,11 +17,11 @@
     "prepublishOnly": "pnpm build"
   },
   "dependencies": {
-    "@typescript-eslint/utils": "7.1.1"
+    "@typescript-eslint/utils": "7.2.0"
   },
   "devDependencies": {
-    "@types/node": "20.11.24",
-    "@typescript-eslint/rule-tester": "7.1.1",
+    "@types/node": "20.11.26",
+    "@typescript-eslint/rule-tester": "7.2.0",
     "unbuild": "2.0.0",
     "vitest": "1.3.1"
   }

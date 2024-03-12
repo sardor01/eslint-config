@@ -15,7 +15,7 @@ module.exports = {
     'plugin:eslint-comments/recommended',
     'plugin:jsonc/recommended-with-jsonc',
     'plugin:yml/standard',
-    'plugin:markdown/recommended',
+    'plugin:markdown/recommended-legacy',
     'plugin:jsdoc/recommended',
   ],
   ignorePatterns: [
