@@ -16,10 +16,10 @@
   "dependencies": {
     "@sarast/eslint-config-basic": "workspace:*",
     "@sarast/eslint-config-ts": "workspace:*",
-    "eslint-plugin-vue": "9.23.0",
+    "eslint-plugin-vue": "9.24.1",
     "local-pkg": "0.5.0"
   },
   "devDependencies": {
-    "eslint": "8.57.0"
+    "eslint": "8.56.0"
   }
 }
