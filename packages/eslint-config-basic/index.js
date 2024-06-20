@@ -50,7 +50,7 @@ module.exports = {
     // force exclude
     '**/.vitepress/cache',
   ],
-  plugins: ['html', 'unicorn', 'sarast', 'no-only-tests', 'unused-imports', 'jsdoc'],
+  plugins: ['html', 'unicorn', 'sarast', 'no-only-tests', 'unused-imports', 'jsdoc', 'simple-import-sort'],
   settings: {
     'import/resolver': {
       node: { extensions: ['.js', '.mjs'] },
@@ -413,5 +413,9 @@ module.exports = {
     // sarast
     'sarast/no-import-dist': 'error',
     'sarast/no-import-node-modules-by-path': 'error',
+
+    // simple-import-sort
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
   },
 };

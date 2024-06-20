@@ -1,4 +1,5 @@
 import { RuleTester } from '@typescript-eslint/rule-tester';
+
 import rule, { RULE_NAME } from './no-import-dist';
 
 const valids = ['import xxx from "a"', 'import "b"', 'import "floating-vue/dist/foo.css"'];
