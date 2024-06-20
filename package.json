@@ -1,6 +1,6 @@
 {
   "name": "@sarast/eslint-config-monorepo",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "private": true,
   "packageManager": "pnpm@9.4.0",
   "scripts": {
