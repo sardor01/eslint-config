@@ -1,6 +1,6 @@
 {
   "name": "@sarast/eslint-config-react",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "license": "MIT",
   "homepage": "https://github.com/sardor01/eslint-config",
   "keywords": [
