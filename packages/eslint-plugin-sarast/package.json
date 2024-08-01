@@ -20,9 +20,10 @@
     "@typescript-eslint/utils": "7.3.1"
   },
   "devDependencies": {
-    "@types/node": "20.14.6",
+    "@types/node": "22.0.2",
     "@typescript-eslint/rule-tester": "7.3.1",
+    "mkdist": "1.5.3",
     "unbuild": "2.0.0",
-    "vitest": "1.6.0"
+    "vitest": "2.0.5"
   }
 }
