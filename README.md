@@ -1,106 +1,86 @@
-# @sarast/eslint-config
+# @sarast/eslint-config [![npm](https://img.shields.io/npm/v/@sarast/eslint-config.svg)](https://npmjs.com/package/@sarast/eslint-config)
+
+A opinionated ESLint config preset for JavaScript, TypeScript, Vue 2 or Vue 3,
+and Prettier.
+
+## Features
+
+- Format with Prettier.
+- Designed to work with TypeScript, Vue 2 and 3 out-of-box.
+- Support JSON(5), YAML, Markdown...
+- Sort imports, `package.json`, `tsconfig.json`...
+- [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), compose easily!
+- Ignores common files like `dist`, `node_modules`, `coverage`, and files in `.gitignore`.
+- Reasonable defaults, best practices, only one-line of config
+- Reasonable strict, but with better code quality.
+
+## Install
+
+```bash
+npm i -D @sarast/eslint-config
+```
+
+Require Node.js >= 18.18, and ESLint >= 9.5.0.
 
 ## Usage
 
-### Install
-
-```bash
-pnpm add -D eslint @sarast/eslint-config
-```
-
-### Config `.eslintrc`
-
-```json
-{
-  "extends": "@sarast"
-}
-```
-
-> You don't need `.eslintignore` normally as it has been provided by the preset.
-
-### Add script for package.json
-
-For example:
-
-```json
-{
-  "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
-  }
-}
-```
-
-### VS Code support (auto fix)
-
-Install [VS Code ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-
-Add the following settings to your `settings.json`:
-
-```jsonc
-{
-  "prettier.enable": false,
-  "editor.formatOnSave": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.organizeImports": false,
-  },
-
-  // The following is optional.
-  // It's better to put under project setting `.vscode/settings.json`
-  // to avoid conflicts with working with different eslint configs
-  // that does not support all formats.
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "vue",
-    "html",
-    "markdown",
-    "json",
-    "jsonc",
-    "yaml",
+```js
+import { sarast } from '@sarast/eslint-config'
+export default sarast(
+  [
+    /* your custom config */
   ],
-}
+  // Features: it'll detect installed dependency and enable necessary features automatically
+  {
+    prettier: true,
+    markdown: true,
+    vue: true, // auto detection
+    unocss: false, // auto detection
+  },
+)
 ```
 
-### TypeScript Aware Rules
-
-Type aware rules are enabled when a `tsconfig.eslint.json` is found in the project root, which will introduce some stricter rules into your project. If you want to enable it while have no `tsconfig.eslint.json` in the project root, you can change tsconfig name by modifying `ESLINT_TSCONFIG` env.
+### Presets
 
 ```js
-// .eslintrc.js
-const process = require('node:process');
+// eslint.config.js
+import {
+  presetJavaScript, // Ignore common files and include javascript support
+  presetJsonc, // Includes basic json(c) file support and sorting json keys
+  presetLangsExtensions, // Includes markdown, yaml + `presetJsonc` support
+  presetBasic, // Includes `presetJavaScript` and typescript support
 
-process.env.ESLINT_TSCONFIG = 'tsconfig.json';
+  // Includes
+  // - `presetBasic` (JS+TS) support
+  // - `presetLangsExtensions` (markdown, yaml, jsonc) support
+  // - Vue support
+  // - UnoCSS support (`uno.config.ts` is required)
+  // - Prettier support
+  presetAll,
+} from '@sarast/eslint-config'
 
-module.exports = {
-  extends: '@sarast',
-};
+export default presetAll
 ```
 
-### Lint Staged
+See [preset.ts](./src/presets.ts) for more details.
 
-If you want to apply lint and auto-fix before every commit, you can add the following to your `package.json`:
+## Comparing to [`@antfu/eslint-config`](https://github.com/antfu/eslint-config)
 
-```json
-{
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
-  },
-  "lint-staged": {
-    "*": "eslint --fix"
-  }
-}
-```
+Most of the rules are the same, but there are some differences:
 
-and then
+- Use [Prettier](https://prettier.io/) instead of [ESLint Stylistic](https://github.com/eslint-stylistic/eslint-stylistic).
+- Support both Vue 2 and Vue 3.
+- Support Vue Reactivity Transform.
+- More stricter rules.
 
-```bash
-npm i -D lint-staged simple-git-hooks
-```
+## Credit
+
+This eslint config is inspired by:
+
+- [`@sxzz/eslint-config`](https://github.com/sxzz/eslint-config), created by [Kevin Deng 三咲智子](https://github.com/sxzz)
+- [`@antfu/eslint-config`](https://github.com/antfu/eslint-config), created by [Anthony Fu](https://github.com/antfu)
+- [Vite](https://github.com/vitejs/vite), created by [Evan You](https://github.com/yyx990803) and Vite community
 
 ## License
 
-[MIT](./LICENSE) License &copy; 2024 [Sardor Astanov](https://github.com/sardor01)
+[MIT](./LICENSE) License © 2024-PRESENT [Sardor Astanov](https://github.com/sardor01)
