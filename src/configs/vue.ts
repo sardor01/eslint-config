@@ -14,29 +14,6 @@ export function getVueVersion() {
 }
 const isVue3 = getVueVersion() === 3;
 
-export const reactivityTransform: Linter.Config[] = [
-  {
-    languageOptions: {
-      globals: {
-        $: 'readonly',
-        $$: 'readonly',
-        $computed: 'readonly',
-        $customRef: 'readonly',
-        $ref: 'readonly',
-        $shallowRef: 'readonly',
-        $toRef: 'readonly',
-      },
-    },
-    name: 'sarast/vue/reactivity-transform',
-    plugins: {
-      vue: pluginVue,
-    },
-    rules: {
-      'vue/no-setup-props-reactivity-loss': 'off',
-    },
-  },
-];
-
 const vueCustomRules: Linter.RulesRecord = {
   'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
   'vue/custom-event-name-casing': ['error', 'camelCase'],
@@ -131,5 +108,4 @@ export const vue: Linter.Config[] = [
       ...vueCustomRules,
     },
   },
-  ...reactivityTransform,
 ];

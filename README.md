@@ -25,7 +25,7 @@ Require Node.js >= 18.18, and ESLint >= 9.5.0.
 ## Usage
 
 ```js
-import { sarast } from '@sarast/eslint-config'
+import { sarast } from '@sarast/eslint-config';
 export default sarast(
   [
     /* your custom config */
@@ -37,7 +37,7 @@ export default sarast(
     vue: true, // auto detection
     unocss: false, // auto detection
   },
-)
+);
 ```
 
 ### Presets
@@ -57,9 +57,9 @@ import {
   // - UnoCSS support (`uno.config.ts` is required)
   // - Prettier support
   presetAll,
-} from '@sarast/eslint-config'
+} from '@sarast/eslint-config';
 
-export default presetAll
+export default presetAll;
 ```
 
 See [preset.ts](./src/presets.ts) for more details.
@@ -70,7 +70,6 @@ Most of the rules are the same, but there are some differences:
 
 - Use [Prettier](https://prettier.io/) instead of [ESLint Stylistic](https://github.com/eslint-stylistic/eslint-stylistic).
 - Support both Vue 2 and Vue 3.
-- Support Vue Reactivity Transform.
 - More stricter rules.
 
 ## Credit
