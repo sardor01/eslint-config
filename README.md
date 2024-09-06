@@ -54,8 +54,8 @@ import {
   // - `presetBasic` (JS+TS) support
   // - `presetLangsExtensions` (markdown, yaml, jsonc) support
   // - Vue support
-  // - UnoCSS support (`uno.config.ts` is required)
   // - Prettier support
+  // - UnoCSS support (`uno.config.ts` is required)
   presetAll,
 } from '@sarast/eslint-config';
 
