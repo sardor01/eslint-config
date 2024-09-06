@@ -1,6 +1,6 @@
-import { GLOB_MARKDOWN, GLOB_SRC, GLOB_VUE } from '../globs'
-import { pluginMarkdown } from '../plugins'
-import type { Linter } from 'eslint'
+import { GLOB_MARKDOWN, GLOB_SRC, GLOB_VUE } from '../globs';
+import { pluginMarkdown } from '../plugins';
+import type { Linter } from 'eslint';
 
 export const markdown: Linter.Config[] = [
   ...pluginMarkdown.configs.processor.map((config: Linter.Config) => ({
@@ -36,4 +36,4 @@ export const markdown: Linter.Config[] = [
       'unused-imports/no-unused-vars': 'off',
     },
   },
-]
+];

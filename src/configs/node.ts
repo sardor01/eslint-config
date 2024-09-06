@@ -1,5 +1,5 @@
-import { pluginNode } from '../plugins'
-import type { Linter } from 'eslint'
+import { pluginNode } from '../plugins';
+import type { Linter } from 'eslint';
 
 export const node: Linter.Config[] = [
   {
@@ -19,4 +19,4 @@ export const node: Linter.Config[] = [
       'node/process-exit-as-throw': 'error',
     },
   },
-]
+];

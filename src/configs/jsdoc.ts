@@ -1,5 +1,5 @@
-import { pluginJsdoc } from '../plugins'
-import type { Linter } from 'eslint'
+import { pluginJsdoc } from '../plugins';
+import type { Linter } from 'eslint';
 
 export const jsdoc: Linter.Config[] = [
   {
@@ -25,4 +25,4 @@ export const jsdoc: Linter.Config[] = [
       'jsdoc/require-yields-check': 'warn',
     },
   },
-]
+];

@@ -1,22 +1,18 @@
-import process from 'node:process'
-import { getPackageInfoSync } from 'local-pkg'
-import { GLOB_VUE } from '../globs'
-import { parserVue, pluginVue, tseslint } from '../plugins'
-import { typescriptCore } from './typescript'
-import type { Linter } from 'eslint'
+import process from 'node:process';
+import { getPackageInfoSync } from 'local-pkg';
+import { GLOB_VUE } from '../globs';
+import { parserVue, pluginVue, tseslint } from '../plugins';
+import { typescriptCore } from './typescript';
+import type { Linter } from 'eslint';
 
 export function getVueVersion() {
-  const pkg = getPackageInfoSync('vue', { paths: [process.cwd()] })
-  if (
-    pkg &&
-    typeof pkg.version === 'string' &&
-    !Number.isNaN(+pkg.version[0])
-  ) {
-    return +pkg.version[0]
+  const pkg = getPackageInfoSync('vue', { paths: [process.cwd()] });
+  if (pkg && typeof pkg.version === 'string' && !Number.isNaN(+pkg.version[0])) {
+    return +pkg.version[0];
   }
-  return 3
+  return 3;
 }
-const isVue3 = getVueVersion() === 3
+const isVue3 = getVueVersion() === 3;
 
 export const reactivityTransform: Linter.Config[] = [
   {
@@ -39,7 +35,7 @@ export const reactivityTransform: Linter.Config[] = [
       'vue/no-setup-props-reactivity-loss': 'off',
     },
   },
-]
+];
 
 const vueCustomRules: Linter.RulesRecord = {
   'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
@@ -80,24 +76,24 @@ const vueCustomRules: Linter.RulesRecord = {
   'vue/prefer-template': 'error',
   'vue/require-default-prop': 'off',
   'vue/require-prop-types': 'off',
-}
+};
 
 const vue3Rules: Linter.RulesRecord = {
   ...pluginVue.configs.base.rules,
   ...pluginVue.configs['vue3-essential'].rules,
   ...pluginVue.configs['vue3-strongly-recommended'].rules,
   ...pluginVue.configs['vue3-recommended'].rules,
-}
+};
 
 const vue2Rules: Linter.RulesRecord = {
   ...pluginVue.configs.base.rules,
   ...pluginVue.configs.essential.rules,
   ...pluginVue.configs['strongly-recommended'].rules,
   ...pluginVue.configs.recommended.rules,
-}
+};
 
-delete vue2Rules['vue/component-tags-order']
-delete vue3Rules['vue/component-tags-order']
+delete vue2Rules['vue/component-tags-order'];
+delete vue3Rules['vue/component-tags-order'];
 
 const vueTs: Linter.Config[] = typescriptCore
   .filter((config) => config.name !== 'typescript-eslint/base')
@@ -106,8 +102,8 @@ const vueTs: Linter.Config[] = typescriptCore
       ...config,
       files: [GLOB_VUE],
       name: `sarast/vue/${config.name?.replace('sarast/', '') || 'anonymous'}`,
-    }
-  })
+    };
+  });
 
 export const vue: Linter.Config[] = [
   ...vueTs,
@@ -136,4 +132,4 @@ export const vue: Linter.Config[] = [
     },
   },
   ...reactivityTransform,
-]
+];

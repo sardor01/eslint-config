@@ -101,9 +101,9 @@ importers:
       '@eslint/config-inspector':
         specifier: 0.5.4
         version: 0.5.4(eslint@9.9.1(jiti@1.21.6))
-      '@sxzz/prettier-config':
-        specifier: 2.0.2
-        version: 2.0.2
+      '@sarast/prettier-config':
+        specifier: 1.0.0
+        version: 1.0.0
       '@types/node':
         specifier: 22.5.4
         version: 22.5.4
@@ -642,8 +642,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@sxzz/prettier-config@2.0.2':
-    resolution: {integrity: sha512-yBKxaIr6WqgHTaLgX0g6gxNuMllkwR1QGeXynfJGmyD+XrZqO96t9xT5Mfbr9H3+N56SXY9/yFvP/e8lcJI7KA==}
+  '@sarast/prettier-config@1.0.0':
+    resolution: {integrity: sha512-ZJnT95oG9UKvNmAQxkU2VCSKa+C7voEMgpUXwqq1p1JuaSIvYpERw2whL2hu2QZIp3ozbxoBMKLn4s382Qxezg==}
 
   '@types/debug@4.1.12':
     resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
@@ -2753,7 +2753,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.21.2':
     optional: true
 
-  '@sxzz/prettier-config@2.0.2': {}
+  '@sarast/prettier-config@1.0.0': {}
 
   '@types/debug@4.1.12':
     dependencies:

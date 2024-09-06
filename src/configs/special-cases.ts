@@ -1,6 +1,6 @@
-import { GLOB_MARKDOWN, GLOB_SRC, GLOB_SRC_EXT } from '../globs'
-import { pluginImport } from '../plugins'
-import type { Config } from '../types'
+import { GLOB_MARKDOWN, GLOB_SRC, GLOB_SRC_EXT } from '../globs';
+import { pluginImport } from '../plugins';
+import type { Config } from '../types';
 
 export const specialCases: Config[] = [
   {
@@ -35,4 +35,4 @@ export const specialCases: Config[] = [
       'import/no-default-export': 'off',
     },
   },
-]
+];

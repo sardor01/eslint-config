@@ -1,4 +1,4 @@
-import { sarast } from './src/index'
+import { sarast } from './src/index';
 
 export default sarast(
   [
@@ -17,4 +17,4 @@ export default sarast(
     },
   ],
   { vue: true },
-)
+);

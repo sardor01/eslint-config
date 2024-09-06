@@ -1,5 +1,5 @@
-import { pluginUnicorn } from '../plugins'
-import type { Config } from '../types'
+import { pluginUnicorn } from '../plugins';
+import type { Config } from '../types';
 
 export const unicorn: Config[] = [
   {
@@ -10,10 +10,7 @@ export const unicorn: Config[] = [
     rules: {
       'unicorn/catch-error-name': 'error',
       'unicorn/consistent-empty-array-spread': 'error',
-      'unicorn/consistent-function-scoping': [
-        'error',
-        { checkArrowFunctions: false },
-      ],
+      'unicorn/consistent-function-scoping': ['error', { checkArrowFunctions: false }],
       'unicorn/custom-error-definition': 'error',
       'unicorn/error-message': 'error',
       'unicorn/escape-case': 'error',
@@ -81,4 +78,4 @@ export const unicorn: Config[] = [
       'unicorn/throw-new-error': 'error',
     },
   },
-]
+];

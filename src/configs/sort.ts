@@ -1,6 +1,6 @@
-import { pluginPerfectionist } from '../plugins'
+import { pluginPerfectionist } from '../plugins';
 
-import type { Linter } from 'eslint'
+import type { Linter } from 'eslint';
 
 export const sortPackageJson: Linter.Config[] = [
   {
@@ -78,7 +78,7 @@ export const sortPackageJson: Linter.Config[] = [
       ],
     },
   },
-]
+];
 
 export const sortTsconfig: Linter.Config[] = [
   {
@@ -88,14 +88,7 @@ export const sortTsconfig: Linter.Config[] = [
       'jsonc/sort-keys': [
         'error',
         {
-          order: [
-            'extends',
-            'compilerOptions',
-            'references',
-            'files',
-            'include',
-            'exclude',
-          ],
+          order: ['extends', 'compilerOptions', 'references', 'files', 'include', 'exclude'],
           pathPattern: '^$',
         },
         {
@@ -203,7 +196,7 @@ export const sortTsconfig: Linter.Config[] = [
       ],
     },
   },
-]
+];
 
 export const sortImports: Linter.Config[] = [
   {
@@ -235,14 +228,8 @@ export const sortImports: Linter.Config[] = [
           newlinesBetween: 'ignore',
         },
       ],
-      'perfectionist/sort-named-exports': [
-        'warn',
-        { groupKind: 'values-first' },
-      ],
-      'perfectionist/sort-named-imports': [
-        'warn',
-        { groupKind: 'values-first' },
-      ],
+      'perfectionist/sort-named-exports': ['warn', { groupKind: 'values-first' }],
+      'perfectionist/sort-named-imports': ['warn', { groupKind: 'values-first' }],
     },
   },
-]
+];

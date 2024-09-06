@@ -71,7 +71,7 @@
   },
   "devDependencies": {
     "@eslint/config-inspector": "0.5.4",
-    "@sxzz/prettier-config": "2.0.2",
+    "@sarast/prettier-config": "1.0.0",
     "@types/node": "22.5.4",
     "bumpp": "9.5.2",
     "eslint": "9.9.1",
@@ -93,5 +93,5 @@
       "@eslint/markdown@6.0.0": "patches/@eslint__markdown@6.0.0.patch"
     }
   },
-  "prettier": "@sxzz/prettier-config"
+  "prettier": "@sarast/prettier-config"
 }

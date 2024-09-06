@@ -19,9 +19,9 @@ import {
   unocss,
   vue,
   yml,
-} from './configs'
-import { hasUnocss, hasVue } from './env'
-import type { Config } from './types'
+} from './configs';
+import { hasUnocss, hasVue } from './env';
+import type { Config } from './types';
 
 /** Ignore common files and include javascript support */
 export const presetJavaScript: Config[] = [
@@ -33,25 +33,13 @@ export const presetJavaScript: Config[] = [
   ...node,
   ...jsdoc,
   ...regexp,
-]
+];
 /** Includes basic json(c) file support and sorting json keys */
-export const presetJsonc: Config[] = [
-  ...jsonc,
-  ...sortPackageJson,
-  ...sortTsconfig,
-]
+export const presetJsonc: Config[] = [...jsonc, ...sortPackageJson, ...sortTsconfig];
 /** Includes markdown, yaml + `presetJsonc` support */
-export const presetLangsExtensions: Config[] = [
-  ...markdown,
-  ...yml,
-  ...presetJsonc,
-]
+export const presetLangsExtensions: Config[] = [...markdown, ...yml, ...presetJsonc];
 /** Includes `presetJavaScript` and typescript support */
-export const presetBasic: Config[] = [
-  ...presetJavaScript,
-  ...typescript,
-  ...sortImports,
-]
+export const presetBasic: Config[] = [...presetJavaScript, ...typescript, ...sortImports];
 /**
  * Includes
  * - `presetBasic` (JS+TS) support
@@ -60,14 +48,8 @@ export const presetBasic: Config[] = [
  * - UnoCSS support (`uno.config.ts` is required)
  * - Prettier support
  */
-export const presetAll: Config[] = [
-  ...presetBasic,
-  ...presetLangsExtensions,
-  ...vue,
-  ...unocss,
-  ...prettier,
-]
-export { presetAll as all, presetBasic as basic }
+export const presetAll: Config[] = [...presetBasic, ...presetLangsExtensions, ...vue, ...unocss, ...prettier];
+export { presetAll as all, presetBasic as basic };
 
 /** `sarast`'s preset. */
 export function sarast(
@@ -80,36 +62,36 @@ export function sarast(
     vue: enableVue = hasVue,
   }: Partial<{
     /** Vue support. Auto-enable. */
-    vue: boolean
+    vue: boolean;
     /** Prettier support. Default: true */
-    prettier: boolean
+    prettier: boolean;
     /** markdown support. Default: true */
-    markdown: boolean
+    markdown: boolean;
     /** UnoCSS support. Auto-enable. */
-    unocss: boolean
-    sortKeys: boolean
-    command: boolean
+    unocss: boolean;
+    sortKeys: boolean;
+    command: boolean;
   }> = {},
 ): Config[] {
-  const configs: Config[] = [...presetBasic, ...yml, ...presetJsonc]
+  const configs: Config[] = [...presetBasic, ...yml, ...presetJsonc];
   if (enableVue) {
-    configs.push(...vue)
+    configs.push(...vue);
   }
   if (enableMarkdown) {
-    configs.push(...markdown)
+    configs.push(...markdown);
   }
   if (enableUnocss) {
-    configs.push(...unocss)
+    configs.push(...unocss);
   }
   if (enablePrettier) {
-    configs.push(...prettier)
+    configs.push(...prettier);
   }
   if (enableCommand) {
-    configs.push(...command)
+    configs.push(...command);
   }
   if (Object.keys(config).length > 0) {
-    configs.push(...(Array.isArray(config) ? config : [config]))
+    configs.push(...(Array.isArray(config) ? config : [config]));
   }
-  configs.push(...specialCases)
-  return configs
+  configs.push(...specialCases);
+  return configs;
 }

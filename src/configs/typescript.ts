@@ -1,8 +1,8 @@
-import { GLOB_JS, GLOB_TS, GLOB_TSX } from '../globs'
-import { tseslint } from '../plugins'
-import type { Rules } from '../typegen'
-import { restrictedSyntaxJs } from './javascript'
-import type { Linter } from 'eslint'
+import { GLOB_JS, GLOB_TS, GLOB_TSX } from '../globs';
+import { tseslint } from '../plugins';
+import type { Rules } from '../typegen';
+import { restrictedSyntaxJs } from './javascript';
+import type { Linter } from 'eslint';
 
 export const typescriptCore = tseslint.config({
   extends: [...tseslint.configs.recommended],
@@ -41,18 +41,11 @@ export const typescriptCore = tseslint.config({
     '@typescript-eslint/no-unused-vars': 'off',
 
     '@typescript-eslint/prefer-as-const': 'warn',
-    '@typescript-eslint/prefer-literal-enum-member': [
-      'error',
-      { allowBitwiseExpressions: true },
-    ],
+    '@typescript-eslint/prefer-literal-enum-member': ['error', { allowBitwiseExpressions: true }],
 
-    'no-restricted-syntax': [
-      'error',
-      ...restrictedSyntaxJs,
-      'TSEnumDeclaration[const=true]',
-    ],
+    'no-restricted-syntax': ['error', ...restrictedSyntaxJs, 'TSEnumDeclaration[const=true]'],
   } satisfies Rules,
-}) as Linter.Config[]
+}) as Linter.Config[];
 
 export const typescript: Linter.Config[] = [
   ...typescriptCore,
@@ -74,4 +67,4 @@ export const typescript: Linter.Config[] = [
       '@typescript-eslint/no-require-imports': 'off',
     },
   },
-]
+];

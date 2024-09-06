@@ -1,5 +1,5 @@
-import { pluginAntfu, pluginImport } from '../plugins'
-import type { Linter } from 'eslint'
+import { pluginAntfu, pluginImport } from '../plugins';
+import type { Linter } from 'eslint';
 
 export const imports: Linter.Config[] = [
   {
@@ -19,4 +19,4 @@ export const imports: Linter.Config[] = [
       'import/no-webpack-loader-syntax': 'error',
     },
   },
-]
+];
