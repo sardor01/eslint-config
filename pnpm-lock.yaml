@@ -7,11 +7,6 @@ settings:
 overrides:
   is-core-module: npm:@no-shims/is-core-module
 
-patchedDependencies:
-  '@eslint/markdown@6.0.0':
-    hash: e666ll23fs2pibe7pumut5lx5u
-    path: patches/@eslint__markdown@6.0.0.patch
-
 importers:
 
   .:
@@ -20,8 +15,8 @@ importers:
         specifier: 9.9.1
         version: 9.9.1
       '@eslint/markdown':
-        specifier: 6.0.0
-        version: 6.0.0(patch_hash=e666ll23fs2pibe7pumut5lx5u)(eslint@9.9.1(jiti@1.21.6))
+        specifier: 6.1.0
+        version: 6.1.0(eslint@9.9.1(jiti@1.21.6))
       '@types/eslint':
         specifier: 9.6.1
         version: 9.6.1
@@ -479,8 +474,8 @@ packages:
     resolution: {integrity: sha512-xIDQRsfg5hNBqHz04H1R3scSVwmI+KUbqjsQKHKQ1DAUSaUjYPReZZmS/5PNiKu1fUvzDd6H7DEDKACSEhu+TQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@eslint/markdown@6.0.0':
-    resolution: {integrity: sha512-VCNBcpN0E3NohzMEe02wxnvKtMh2N0jzitakF+pn6bCEP7bKPUG2D2neQ3406ocQ2T8IZ2jExG3INng/1IWn5A==}
+  '@eslint/markdown@6.1.0':
+    resolution: {integrity: sha512-cX1tyD+aIbhzKrCKe/9M5s2jZhldWGOR+cy7cIVpxG9RkoaN4XU+gG3dy6oEKtBFXjDx06GtP0OGO7jgbqa2DA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=9'
@@ -2624,7 +2619,7 @@ snapshots:
 
   '@eslint/js@9.9.1': {}
 
-  '@eslint/markdown@6.0.0(patch_hash=e666ll23fs2pibe7pumut5lx5u)(eslint@9.9.1(jiti@1.21.6))':
+  '@eslint/markdown@6.1.0(eslint@9.9.1(jiti@1.21.6))':
     dependencies:
       eslint: 9.9.1(jiti@1.21.6)
       mdast-util-from-markdown: 2.0.1
