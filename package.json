@@ -12,7 +12,6 @@
     "type": "git",
     "url": "git+https://github.com/sardor01/eslint-config.git"
   },
-  "funding": "https://github.com/sponsors/sardor01",
   "files": [
     "dist"
   ],
@@ -47,7 +46,7 @@
     "@unocss/eslint-plugin": "0.62.3",
     "eslint-config-flat-gitignore": "0.3.0",
     "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-antfu": "2.5.0",
+    "eslint-plugin-antfu": "2.6.0",
     "eslint-plugin-command": "0.2.4",
     "eslint-plugin-eslint-comments": "3.2.0",
     "eslint-plugin-import-x": "4.2.1",
@@ -65,7 +64,7 @@
     "jsonc-eslint-parser": "2.4.0",
     "local-pkg": "0.5.0",
     "prettier": "3.3.3",
-    "typescript-eslint": "8.4.0",
+    "typescript-eslint": "8.5.0",
     "vue-eslint-parser": "9.4.3",
     "yaml-eslint-parser": "1.2.3"
   },
