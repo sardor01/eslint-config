@@ -31,14 +31,12 @@ const vueCustomRules: Linter.RulesRecord = {
     },
   ],
   'vue/max-attributes-per-line': 'off',
-
   'vue/multi-word-component-names': 'off',
   'vue/no-constant-condition': 'warn',
   'vue/no-empty-pattern': 'error',
   'vue/no-loss-of-precision': 'error',
   'vue/no-unused-refs': 'error',
   'vue/no-useless-v-bind': 'error',
-
   'vue/no-v-html': 'off',
   'vue/object-shorthand': [
     'error',
@@ -53,6 +51,7 @@ const vueCustomRules: Linter.RulesRecord = {
   'vue/prefer-template': 'error',
   'vue/require-default-prop': 'off',
   'vue/require-prop-types': 'off',
+  'vue/v-on-handler-style': ['error', 'inline'],
 };
 
 const vue3Rules: Linter.RulesRecord = {
