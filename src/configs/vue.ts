@@ -51,7 +51,7 @@ const vueCustomRules: Linter.RulesRecord = {
   'vue/prefer-template': 'error',
   'vue/require-default-prop': 'off',
   'vue/require-prop-types': 'off',
-  'vue/v-on-handler-style': ['error', 'inline'],
+  'vue/v-on-handler-style': ['error', 'inline-function'],
 };
 
 const vue3Rules: Linter.RulesRecord = {
