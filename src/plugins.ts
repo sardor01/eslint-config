@@ -4,9 +4,9 @@
 export type InteropDefault<T> = T extends { default: infer U } ? U : T;
 
 /* #__NO_SIDE_EFFECTS__ */
-function interopDefault<T>(m: T): InteropDefault<T> {
+const interopDefault = <T>(m: T): InteropDefault<T> => {
   return 'default' in m ? interopDefault(m.default) : m;
-}
+};
 
 import _configJs from '@eslint/js';
 export const configJs: any = interopDefault(_configJs);

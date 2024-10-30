@@ -3,7 +3,7 @@ import { isInEditor } from '../env';
 import { configJs, pluginUnusedImports } from '../plugins';
 import type { Config } from '../types';
 
-export const restrictedSyntaxJs = ['ForInStatement', 'LabeledStatement', 'WithStatement'];
+export const restrictedSyntaxJs = ['ForInStatement', 'FunctionDeclaration', 'LabeledStatement', 'WithStatement'];
 
 export const javascript: Config[] = [
   { ...configJs.configs.recommended, name: 'sarast/js/recommended' },

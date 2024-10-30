@@ -52,7 +52,7 @@ export const presetAll: Config[] = [...presetBasic, ...presetLangsExtensions, ..
 export { presetAll as all, presetBasic as basic };
 
 /** `sarast`'s preset. */
-export function sarast(
+export const sarast = (
   config: Config | Config[] = [],
   {
     command: enableCommand = true,
@@ -72,7 +72,7 @@ export function sarast(
     sortKeys: boolean;
     command: boolean;
   }> = {},
-): Config[] {
+): Config[] => {
   const configs: Config[] = [...presetBasic, ...yml, ...presetJsonc];
   if (enableVue) {
     configs.push(...vue);
@@ -94,4 +94,4 @@ export function sarast(
   }
   configs.push(...specialCases);
   return configs;
-}
+};
