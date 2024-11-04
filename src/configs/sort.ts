@@ -205,6 +205,7 @@ export const sortImports: Linter.Config[] = [
       perfectionist: pluginPerfectionist,
     },
     rules: {
+      'perfectionist/sort-exports': 'error',
       'perfectionist/sort-imports': [
         'error',
         {
@@ -222,8 +223,8 @@ export const sortImports: Linter.Config[] = [
           newlinesBetween: 'always',
         },
       ],
-      'perfectionist/sort-named-exports': ['warn', { groupKind: 'values-first' }],
-      'perfectionist/sort-named-imports': ['warn', { groupKind: 'values-first' }],
+      'perfectionist/sort-named-exports': ['error', { groupKind: 'values-first' }],
+      'perfectionist/sort-named-imports': ['error', { groupKind: 'values-first' }],
     },
   },
 ];
