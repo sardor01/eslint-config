@@ -1,8 +1,9 @@
+import type { Linter } from 'eslint';
+
 import { GLOB_JS, GLOB_TS, GLOB_TSX } from '../globs';
 import { tseslint } from '../plugins';
 import type { Rules } from '../typegen';
 import { restrictedSyntaxJs } from './javascript';
-import type { Linter } from 'eslint';
 
 export const typescriptCore = tseslint.config({
   extends: [...tseslint.configs.recommended],

@@ -1,4 +1,5 @@
 import globals from 'globals';
+
 import { isInEditor } from '../env';
 import { configJs, pluginUnusedImports } from '../plugins';
 import type { Config } from '../types';

@@ -1,5 +1,6 @@
-import { pluginUnocss } from '../plugins';
 import type { Linter } from 'eslint';
+
+import { pluginUnocss } from '../plugins';
 
 export const unocss: Linter.Config[] = [
   {

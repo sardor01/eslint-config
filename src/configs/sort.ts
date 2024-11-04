@@ -1,6 +1,6 @@
-import { pluginPerfectionist } from '../plugins';
-
 import type { Linter } from 'eslint';
+
+import { pluginPerfectionist } from '../plugins';
 
 export const sortPackageJson: Linter.Config[] = [
   {
@@ -206,26 +206,20 @@ export const sortImports: Linter.Config[] = [
     },
     rules: {
       'perfectionist/sort-imports': [
-        'warn',
+        'error',
         {
           groups: [
-            'builtin',
-            'external',
-            'internal',
-            'internal-type',
-            'parent',
-            'parent-type',
-            'sibling',
-            'sibling-type',
-            'index',
-            'index-type',
-            'object',
             'type',
+            ['builtin', 'builtin-type', 'external', 'external-type'],
+            ['internal', 'internal-type'],
+            ['parent', 'parent-type', 'sibling', 'sibling-type', 'index', 'index-type'],
+            'object',
+            'style',
             'side-effect',
             'side-effect-style',
           ],
           internalPattern: ['~/**', '@/**', '#**'],
-          newlinesBetween: 'ignore',
+          newlinesBetween: 'always',
         },
       ],
       'perfectionist/sort-named-exports': ['warn', { groupKind: 'values-first' }],

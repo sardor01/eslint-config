@@ -1,6 +1,7 @@
+import type { Linter } from 'eslint';
+
 import { GLOB_YAML } from '../globs';
 import { parserYml, pluginYml } from '../plugins';
-import type { Linter } from 'eslint';
 
 export const yml: Linter.Config[] = [
   {

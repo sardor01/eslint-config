@@ -1,6 +1,7 @@
+import type { Linter } from 'eslint';
+
 import { GLOB_EXCLUDE } from '../globs';
 import { pluginIgnore } from '../plugins';
-import type { Linter } from 'eslint';
 
 export const ignores: Linter.Config[] = [
   {

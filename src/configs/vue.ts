@@ -1,9 +1,10 @@
-import process from 'node:process';
+import type { Linter } from 'eslint';
 import { getPackageInfoSync } from 'local-pkg';
+import process from 'node:process';
+
 import { GLOB_VUE } from '../globs';
 import { parserVue, pluginVue, tseslint } from '../plugins';
 import { typescriptCore } from './typescript';
-import type { Linter } from 'eslint';
 
 export const getVueVersion = () => {
   const pkg = getPackageInfoSync('vue', { paths: [process.cwd()] });

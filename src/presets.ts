@@ -61,16 +61,16 @@ export const sarast = (
     unocss: enableUnocss = hasUnocss,
     vue: enableVue = hasVue,
   }: Partial<{
-    /** Vue support. Auto-enable. */
-    vue: boolean;
-    /** Prettier support. Default: true */
-    prettier: boolean;
+    command: boolean;
     /** markdown support. Default: true */
     markdown: boolean;
+    /** Prettier support. Default: true */
+    prettier: boolean;
+    sortKeys: boolean;
     /** UnoCSS support. Auto-enable. */
     unocss: boolean;
-    sortKeys: boolean;
-    command: boolean;
+    /** Vue support. Auto-enable. */
+    vue: boolean;
   }> = {},
 ): Config[] => {
   const configs: Config[] = [...presetBasic, ...yml, ...presetJsonc];

@@ -1,6 +1,7 @@
+import type { Linter } from 'eslint';
+
 import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from '../globs';
 import { parserJsonc, pluginJsonc } from '../plugins';
-import type { Linter } from 'eslint';
 
 export const jsonc: Linter.Config[] = [
   {
