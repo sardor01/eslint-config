@@ -1,5 +1,6 @@
-import { pluginAntfu, pluginImport } from '../plugins';
 import type { Linter } from 'eslint';
+
+import { pluginAntfu, pluginImport } from '../plugins';
 
 export const imports: Linter.Config[] = [
   {
@@ -17,6 +18,7 @@ export const imports: Linter.Config[] = [
       'import/no-named-default': 'error',
       'import/no-self-import': 'error',
       'import/no-webpack-loader-syntax': 'error',
+      'no-restricted-imports': ['error', { patterns: ['..*'] }],
     },
   },
 ];
