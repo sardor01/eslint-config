@@ -18,7 +18,7 @@ export const imports: Linter.Config[] = [
       'import/no-named-default': 'error',
       'import/no-self-import': 'error',
       'import/no-webpack-loader-syntax': 'error',
-      'no-restricted-imports': ['error', { patterns: ['..*'] }],
+      'no-restricted-imports': ['error', { patterns: ['../..*'] }],
     },
   },
 ];

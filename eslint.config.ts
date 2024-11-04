@@ -3,12 +3,6 @@ import { sarast } from './src/index';
 export default sarast(
   [
     {
-      files: ['**/*.ts'],
-      rules: {
-        'no-restricted-imports': 'off',
-      },
-    },
-    {
       files: ['src/**/*.ts'],
       rules: {
         'perfectionist/sort-objects': 'error',
