@@ -1,6 +1,3 @@
 {
-  "editor.formatOnSave": true,
-  "eslint.options": {
-    "flags": ["unstable_ts_config"]
-  }
+  "editor.formatOnSave": true
 }
