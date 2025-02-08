@@ -40,7 +40,7 @@
     "eslint": "^9.10.0"
   },
   "dependencies": {
-    "@eslint/js": "9.19.0",
+    "@eslint/js": "9.20.0",
     "@eslint/markdown": "6.2.2",
     "@types/eslint": "9.6.1",
     "@unocss/eslint-plugin": "65.4.3",
@@ -72,8 +72,8 @@
     "@eslint/config-inspector": "1.0.0",
     "@sarast/prettier-config": "1.1.0",
     "@types/node": "22.13.1",
-    "bumpp": "10.0.1",
-    "eslint": "9.19.0",
+    "bumpp": "10.0.2",
+    "eslint": "9.20.0",
     "eslint-typegen": "1.0.0",
     "importx": "0.5.1",
     "picocolors": "1.1.1",
