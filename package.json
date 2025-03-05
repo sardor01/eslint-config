@@ -1,6 +1,6 @@
 {
   "name": "@sarast/eslint-config",
-  "version": "1.10.0",
+  "version": "2.0.0",
   "packageManager": "pnpm@10.5.2+sha256.79a98daa90248b50815e31460790f118c56fe099113370826caa0153be6daba5",
   "type": "module",
   "license": "MIT",
