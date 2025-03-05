@@ -24,19 +24,16 @@ import tseslint from 'typescript-eslint';
 export { tseslint };
 
 import * as _pluginUnicorn from 'eslint-plugin-unicorn';
-export const pluginUnicorn: any = interopDefault(_pluginUnicorn);
+export const pluginUnicorn = interopDefault(_pluginUnicorn);
 
 import * as _pluginVue from 'eslint-plugin-vue';
-export const pluginVue: any = interopDefault(_pluginVue);
+export const pluginVue = interopDefault(_pluginVue);
 
-import * as _pluginNode from 'eslint-plugin-n';
-export const pluginNode: typeof import('eslint-plugin-n') = interopDefault(_pluginNode);
+import _pluginNode from 'eslint-plugin-n';
+export const pluginNode = interopDefault(_pluginNode);
 
 import * as _pluginPerfectionist from 'eslint-plugin-perfectionist';
 export const pluginPerfectionist: any = interopDefault(_pluginPerfectionist);
-
-import * as _pluginUnocss from '@unocss/eslint-plugin';
-export const pluginUnocss: typeof import('@unocss/eslint-plugin').default = interopDefault(_pluginUnocss);
 
 import * as _pluginPrettier from 'eslint-plugin-prettier';
 export const pluginPrettier: any = interopDefault(_pluginPrettier);
@@ -45,13 +42,13 @@ import * as _configPrettier from 'eslint-config-prettier';
 export const configPrettier: any = interopDefault(_configPrettier);
 
 import * as _pluginUnusedImports from 'eslint-plugin-unused-imports';
-export const pluginUnusedImports: any = interopDefault(_pluginUnusedImports);
+export const pluginUnusedImports = interopDefault(_pluginUnusedImports);
 
 import * as _pluginJsdoc from 'eslint-plugin-jsdoc';
 export const pluginJsdoc: any = interopDefault(_pluginJsdoc);
 
 import * as _pluginIgnore from 'eslint-config-flat-gitignore';
-export const pluginIgnore: any = interopDefault(_pluginIgnore);
+export const pluginIgnore = interopDefault(_pluginIgnore);
 
 export * as pluginImport from 'eslint-plugin-import-x';
 export * as pluginJsonc from 'eslint-plugin-jsonc';

@@ -1,12 +1,12 @@
 # @sarast/eslint-config [![npm](https://img.shields.io/npm/v/@sarast/eslint-config.svg)](https://npmjs.com/package/@sarast/eslint-config)
 
-A opinionated ESLint config preset for JavaScript, TypeScript, Vue 2 or Vue 3,
+A opinionated ESLint config preset for JavaScript, TypeScript, Vue 3,
 and Prettier.
 
 ## Features
 
 - Format with Prettier.
-- Designed to work with TypeScript, Vue 2 and 3 out-of-box.
+- Designed to work with TypeScript, Vue 3 out-of-box.
 - Support JSON(5), YAML, Markdown...
 - Sort imports, `package.json`, `tsconfig.json`...
 - [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), compose easily!
@@ -35,7 +35,6 @@ export default sarast(
     prettier: true,
     markdown: true,
     vue: true, // auto detection
-    unocss: false, // auto detection
   },
 );
 ```
@@ -55,7 +54,6 @@ import {
   // - `presetLangsExtensions` (markdown, yaml, jsonc) support
   // - Vue support
   // - Prettier support
-  // - UnoCSS support (`uno.config.ts` is required)
   presetAll,
 } from '@sarast/eslint-config';
 
@@ -69,8 +67,8 @@ See [preset.ts](./src/presets.ts) for more details.
 Most of the rules are the same, but there are some differences:
 
 - Use [Prettier](https://prettier.io/) instead of [ESLint Stylistic](https://github.com/eslint-stylistic/eslint-stylistic).
-- Support both Vue 2 and Vue 3.
-- More stricter rules.
+- Vue 3 Support.
+- Stricter rules.
 
 ## Credit
 

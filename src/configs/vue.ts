@@ -1,19 +1,8 @@
 import type { Linter } from 'eslint';
-import { getPackageInfoSync } from 'local-pkg';
-import process from 'node:process';
 
 import { GLOB_VUE } from '../globs';
 import { parserVue, pluginVue, tseslint } from '../plugins';
 import { typescriptCore } from './typescript';
-
-export const getVueVersion = () => {
-  const pkg = getPackageInfoSync('vue', { paths: [process.cwd()] });
-  if (pkg && typeof pkg.version === 'string' && !Number.isNaN(+pkg.version[0])) {
-    return +pkg.version[0];
-  }
-  return 3;
-};
-const isVue3 = getVueVersion() === 3;
 
 const vueCustomRules: Linter.RulesRecord = {
   'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
@@ -55,22 +44,14 @@ const vueCustomRules: Linter.RulesRecord = {
   'vue/v-on-handler-style': ['error', 'inline-function'],
 };
 
-const vue3Rules: Linter.RulesRecord = {
+const vueRules: Linter.RulesRecord = {
   ...pluginVue.configs.base.rules,
-  ...pluginVue.configs['vue3-essential'].rules,
-  ...pluginVue.configs['vue3-strongly-recommended'].rules,
-  ...pluginVue.configs['vue3-recommended'].rules,
+  ...(pluginVue.configs['flat/essential'].map((c) => c.rules).reduce((acc, c) => ({ ...acc, ...c }), {}) as any),
+  ...(pluginVue.configs['flat/strongly-recommended']
+    .map((c) => c.rules)
+    .reduce((acc, c) => ({ ...acc, ...c }), {}) as any),
+  ...(pluginVue.configs['flat/recommended'].map((c) => c.rules).reduce((acc, c) => ({ ...acc, ...c }), {}) as any),
 };
-
-const vue2Rules: Linter.RulesRecord = {
-  ...pluginVue.configs.base.rules,
-  ...pluginVue.configs.essential.rules,
-  ...pluginVue.configs['strongly-recommended'].rules,
-  ...pluginVue.configs.recommended.rules,
-};
-
-delete vue2Rules['vue/component-tags-order'];
-delete vue3Rules['vue/component-tags-order'];
 
 const vueTs: Linter.Config[] = typescriptCore
   .filter((config) => config.name !== 'typescript-eslint/base')
@@ -104,7 +85,7 @@ export const vue: Linter.Config[] = [
     },
     processor: pluginVue.processors['.vue'],
     rules: {
-      ...(isVue3 ? vue3Rules : vue2Rules),
+      ...vueRules,
       ...vueCustomRules,
     },
   },

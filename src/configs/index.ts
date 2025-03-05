@@ -13,6 +13,5 @@ export * from './sort';
 export * from './special-cases';
 export * from './typescript';
 export * from './unicorn';
-export * from './unocss';
 export * from './vue';
 export * from './yml';

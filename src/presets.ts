@@ -16,11 +16,10 @@ import {
   specialCases,
   typescript,
   unicorn,
-  unocss,
   vue,
   yml,
 } from './configs';
-import { hasUnocss, hasVue } from './env';
+import { hasVue } from './env';
 import type { Config } from './types';
 
 /** Ignore common files and include javascript support */
@@ -45,10 +44,9 @@ export const presetBasic: Config[] = [...presetJavaScript, ...typescript, ...sor
  * - `presetBasic` (JS+TS) support
  * - `presetLangsExtensions` (markdown, yaml, jsonc) support
  * - Vue support
- * - UnoCSS support (`uno.config.ts` is required)
  * - Prettier support
  */
-export const presetAll: Config[] = [...presetBasic, ...presetLangsExtensions, ...vue, ...unocss, ...prettier];
+export const presetAll: Config[] = [...presetBasic, ...presetLangsExtensions, ...vue, ...prettier];
 export { presetAll as all, presetBasic as basic };
 
 /** `sarast`'s preset. */
@@ -58,7 +56,6 @@ export const sarast = (
     command: enableCommand = true,
     markdown: enableMarkdown = true,
     prettier: enablePrettier = true,
-    unocss: enableUnocss = hasUnocss,
     vue: enableVue = hasVue,
   }: Partial<{
     command: boolean;
@@ -67,8 +64,6 @@ export const sarast = (
     /** Prettier support. Default: true */
     prettier: boolean;
     sortKeys: boolean;
-    /** UnoCSS support. Auto-enable. */
-    unocss: boolean;
     /** Vue support. Auto-enable. */
     vue: boolean;
   }> = {},
@@ -79,9 +74,6 @@ export const sarast = (
   }
   if (enableMarkdown) {
     configs.push(...markdown);
-  }
-  if (enableUnocss) {
-    configs.push(...unocss);
   }
   if (enablePrettier) {
     configs.push(...prettier);
