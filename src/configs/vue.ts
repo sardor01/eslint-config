@@ -1,4 +1,4 @@
-import type { Linter } from 'eslint';
+import type { ESLint, Linter } from 'eslint';
 
 import { GLOB_VUE } from '../globs';
 import { parserVue, pluginVue, tseslint } from '../plugins';
@@ -80,7 +80,7 @@ export const vue: Linter.Config[] = [
     },
     name: 'sarast/vue',
     plugins: {
-      '@typescript-eslint': tseslint.plugin as any,
+      '@typescript-eslint': tseslint.plugin as ESLint.Plugin,
       vue: pluginVue,
     },
     processor: pluginVue.processors['.vue'],
