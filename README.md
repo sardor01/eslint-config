@@ -20,7 +20,7 @@ and Prettier.
 npm i -D @sarast/eslint-config
 ```
 
-Require Node.js >= 18.18, and ESLint >= 9.20.0.
+Require Node.js >= 20.0.0, and ESLint >= 9.20.0.
 
 ## Usage
 
