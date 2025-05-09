@@ -27,16 +27,16 @@ Require Node.js >= 18.18, and ESLint >= 9.20.0.
 ```js
 import { sarast } from '@sarast/eslint-config';
 export default sarast(
-  [
-    /* your custom config */
-  ],
   // Features: it'll detect installed dependency and enable necessary features automatically
   {
     prettier: true,
     markdown: true,
     vue: true, // auto detection
   },
-);
+  [
+    /* your custom config */
+  ],
+).removeRules('foo/bar'); // see more in https://github.com/antfu/eslint-flat-config-utils;
 ```
 
 ### Presets
