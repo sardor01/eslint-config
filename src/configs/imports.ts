@@ -1,8 +1,7 @@
-import type { Linter } from 'eslint';
-
 import { pluginAntfu, pluginImport } from '../plugins';
+import type { Config } from '../types';
 
-export const imports: Linter.Config[] = [
+export const imports = (): Config[] => [
   {
     name: 'sarast/imports',
     plugins: {

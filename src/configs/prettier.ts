@@ -5,7 +5,7 @@ import { configPrettier, pluginPrettier, pluginPrettierRecommended } from '../pl
 const prettierConflictRules = { ...configPrettier.rules };
 delete prettierConflictRules['vue/html-self-closing'];
 
-export const prettier: Linter.Config[] = [
+export const prettier = (): Linter.Config[] => [
   {
     name: 'sarast/prettier',
     plugins: {

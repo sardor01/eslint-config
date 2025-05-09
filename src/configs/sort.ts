@@ -1,8 +1,7 @@
-import type { Linter } from 'eslint';
-
 import { pluginPerfectionist } from '../plugins';
+import type { Config } from '../types';
 
-export const sortPackageJson: Linter.Config[] = [
+export const sortPackageJson = (): Config[] => [
   {
     files: ['**/package.json'],
     name: 'sarast/sort/package.json',
@@ -80,7 +79,7 @@ export const sortPackageJson: Linter.Config[] = [
   },
 ];
 
-export const sortTsconfig: Linter.Config[] = [
+export const sortTsconfig = (): Config[] => [
   {
     files: ['**/tsconfig.json', '**/tsconfig.*.json'],
     name: 'sarast/sort/tsconfig',
@@ -198,7 +197,7 @@ export const sortTsconfig: Linter.Config[] = [
   },
 ];
 
-export const sortImports: Linter.Config[] = [
+export const sortImports = (): Config[] => [
   {
     name: 'sarast/sort/imports',
     plugins: {

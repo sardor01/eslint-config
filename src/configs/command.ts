@@ -1,8 +1,7 @@
-import type { Linter } from 'eslint';
-
 import { configCommand } from '../plugins';
+import type { Config } from '../types';
 
-export const command: Linter.Config[] = [
+export const command = (): Config[] => [
   {
     ...configCommand(),
     name: 'sarast/command',

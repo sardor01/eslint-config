@@ -1,3 +1,3 @@
-import { sarast } from './src/index.ts';
+import { sarast } from './src/index';
 
-export default sarast([], { vue: true });
+export default sarast({ vue: true });

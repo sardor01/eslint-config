@@ -1,8 +1,7 @@
-import type { Linter } from 'eslint';
-
 import { pluginNode } from '../plugins';
+import type { Config } from '../types';
 
-export const node: Linter.Config[] = [
+export const node = (): Config[] => [
   {
     name: 'sarast/node',
     plugins: {

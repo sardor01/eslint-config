@@ -1,8 +1,7 @@
-import type { Linter } from 'eslint';
-
 import { pluginJsdoc } from '../plugins';
+import type { Config } from '../types';
 
-export const jsdoc: Linter.Config[] = [
+export const jsdoc = (): Config[] => [
   {
     name: 'sarast/jsdoc',
     plugins: {

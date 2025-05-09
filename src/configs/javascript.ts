@@ -6,7 +6,7 @@ import type { Config } from '../types';
 
 export const restrictedSyntaxJs = ['ForInStatement', 'FunctionDeclaration', 'LabeledStatement', 'WithStatement'];
 
-export const javascript: Config[] = [
+export const javascript = (): Config[] => [
   { ...configJs.configs.recommended, name: 'sarast/js/recommended' },
   {
     languageOptions: {

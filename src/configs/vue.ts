@@ -63,7 +63,7 @@ const vueTs: Linter.Config[] = typescriptCore
     };
   });
 
-export const vue: Linter.Config[] = [
+export const vue = (): Linter.Config[] => [
   ...vueTs,
   {
     files: [GLOB_VUE],
