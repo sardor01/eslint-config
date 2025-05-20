@@ -19,7 +19,10 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.js",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
     "./package.json": "./package.json"
   },
   "publishConfig": {
@@ -73,7 +76,7 @@
   "devDependencies": {
     "@eslint/config-inspector": "1.0.2",
     "@sarast/prettier-config": "1.2.1",
-    "@types/node": "22.15.18",
+    "@types/node": "22.15.19",
     "bumpp": "10.1.1",
     "eslint": "9.27.0",
     "eslint-typegen": "2.2.0",
