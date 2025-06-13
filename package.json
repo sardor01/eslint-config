@@ -90,14 +90,5 @@
   "engines": {
     "node": ">=22"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "unrs-resolver"
-    ],
-    "overrides": {
-      "is-core-module": "npm:@no-shims/is-core-module"
-    }
-  },
   "prettier": "@sarast/prettier-config"
 }
