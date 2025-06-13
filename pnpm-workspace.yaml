@@ -11,4 +11,4 @@ onlyBuiltDependencies:
   - unrs-resolver
 
 overrides:
-  'is-core-module': 'npm:@no-shims/is-core-module'
+  is-core-module: 'npm:@no-shims/is-core-module'
