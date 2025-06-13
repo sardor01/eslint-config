@@ -55,10 +55,10 @@
     "eslint-flat-config-utils": "2.1.0",
     "eslint-plugin-antfu": "3.1.1",
     "eslint-plugin-command": "3.2.1",
-    "eslint-plugin-import-x": "4.15.1",
-    "eslint-plugin-jsdoc": "50.7.1",
+    "eslint-plugin-import-x": "4.15.2",
+    "eslint-plugin-jsdoc": "51.0.1",
     "eslint-plugin-jsonc": "2.20.1",
-    "eslint-plugin-n": "17.19.0",
+    "eslint-plugin-n": "17.20.0",
     "eslint-plugin-perfectionist": "4.14.0",
     "eslint-plugin-prettier": "5.4.1",
     "eslint-plugin-regexp": "2.9.0",
@@ -76,7 +76,7 @@
   "devDependencies": {
     "@eslint/config-inspector": "1.1.0",
     "@sarast/prettier-config": "1.2.1",
-    "@types/node": "22.15.30",
+    "@types/node": "24.0.1",
     "bumpp": "10.1.1",
     "eslint": "9.28.0",
     "eslint-typegen": "2.2.0",
@@ -84,7 +84,7 @@
     "picocolors": "1.1.1",
     "prettier": "3.5.3",
     "tsup": "8.5.0",
-    "tsx": "4.19.4",
+    "tsx": "4.20.3",
     "typescript": "5.8.3"
   },
   "engines": {
