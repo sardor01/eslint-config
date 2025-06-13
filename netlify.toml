@@ -3,7 +3,7 @@ publish = ".eslint-config-inspector"
 command = "pnpm build:inspector"
 
 [build.environment]
-NODE_VERSION = "20"
+NODE_VERSION = "22"
 
 [[redirects]]
 from = "/*"
