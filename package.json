@@ -1,7 +1,7 @@
 {
   "name": "@sarast/eslint-config",
   "version": "5.0.1",
-  "packageManager": "pnpm@10.12.1+sha256.889bac470ec93ccc3764488a19d6ba8f9c648ad5e50a9a6e4be3768a5de387a3",
+  "packageManager": "pnpm@10.12.1+sha512.f0dda8580f0ee9481c5c79a1d927b9164f2c478e90992ad268bbb2465a736984391d6333d2c327913578b2804af33474ca554ba29c04a8b13060a717675ae3ac",
   "type": "module",
   "license": "MIT",
   "homepage": "https://github.com/sardor01/eslint-config#readme",
@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "4.5.0",
-    "@eslint/js": "9.28.0",
+    "@eslint/js": "9.29.0",
     "@eslint/markdown": "6.5.0",
     "@types/eslint": "9.6.1",
     "eslint-config-flat-gitignore": "2.1.0",
@@ -78,7 +78,7 @@
     "@sarast/prettier-config": "1.2.1",
     "@types/node": "24.0.1",
     "bumpp": "10.1.1",
-    "eslint": "9.28.0",
+    "eslint": "9.29.0",
     "eslint-typegen": "2.2.0",
     "importx": "0.5.2",
     "picocolors": "1.1.1",
