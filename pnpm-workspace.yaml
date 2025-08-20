@@ -11,4 +11,6 @@ onlyBuiltDependencies:
   - unrs-resolver
 
 overrides:
+  '@typescript-eslint/types': 8.40.0
+  '@typescript-eslint/utils': 8.40.0
   is-core-module: 'npm:@no-shims/is-core-module'
