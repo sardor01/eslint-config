@@ -1,8 +1,6 @@
 import { sarast } from './src/index';
 
-export default sarast({
-  vue: true,
-}).append(
+export default sarast().append(
   {
     files: ['src/**/*.ts'],
     rules: {
@@ -15,5 +13,8 @@ export default sarast({
       'perfectionist/sort-imports': 'off',
       'perfectionist/sort-named-imports': 'off',
     },
+  },
+  {
+    ignores: ['src/typegen.ts'],
   },
 );

@@ -81,8 +81,3 @@ This eslint config is inspired by:
 ## License
 
 [MIT](./LICENSE) License © 2024-PRESENT [Sardor Astanov](https://github.com/sardor01)
-
-## TODO
-
-- [ ] Improve `vue/html-indent` rule usage.
-- [ ] Improve `vue/html-self-closing` rule usage.

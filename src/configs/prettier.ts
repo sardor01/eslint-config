@@ -1,19 +1,17 @@
-import type { Linter } from 'eslint';
+import { pluginPrettier, pluginPrettierRecommended } from '../plugins';
+import type { Config } from '../types';
 
-import { configPrettier, pluginPrettier, pluginPrettierRecommended } from '../plugins';
+const rules = { ...pluginPrettierRecommended.rules };
+delete rules['vue/html-self-closing'];
 
-const prettierConflictRules = { ...configPrettier.rules };
-delete prettierConflictRules['vue/html-self-closing'];
-
-export const prettier = (): Linter.Config[] => [
+export const prettier = (): Config[] => [
   {
     name: 'sarast/prettier',
     plugins: {
       prettier: pluginPrettier,
     },
     rules: {
-      ...prettierConflictRules,
-      ...pluginPrettierRecommended.rules,
+      ...rules,
       'prettier/prettier': 'warn',
     },
   },

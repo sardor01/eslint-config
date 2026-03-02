@@ -3,10 +3,12 @@ import { pluginMarkdown } from '../plugins';
 import type { Config } from '../types';
 
 export const markdown = (): Config[] => [
-  ...pluginMarkdown.configs.processor.map((config: Config) => ({
-    ...config,
-    name: `sarast/${config.name || 'anonymous'}`,
-  })),
+  ...pluginMarkdown.configs.processor.map(
+    (config): Config => ({
+      ...(config as Config),
+      name: `sarast/${config.name || 'anonymous'}`,
+    }),
+  ),
 
   {
     files: [`${GLOB_MARKDOWN}/${GLOB_SRC}`, `${GLOB_MARKDOWN}/${GLOB_VUE}`],
@@ -31,6 +33,9 @@ export const markdown = (): Config[] => [
 
       'node/prefer-global/buffer': 'off',
       'node/prefer-global/process': 'off',
+
+      'unicorn/no-anonymous-default-export': 'off',
+      'unicorn/no-useless-undefined': 'off',
 
       'unused-imports/no-unused-imports': 'off',
       'unused-imports/no-unused-vars': 'off',

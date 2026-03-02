@@ -1,10 +1,14 @@
 import globals from 'globals';
 
-import { isInEditor } from '../env';
 import { configJs, pluginUnusedImports } from '../plugins';
 import type { Config } from '../types';
 
-export const restrictedSyntaxJs = ['ForInStatement', 'FunctionDeclaration', 'LabeledStatement', 'WithStatement'];
+export const restrictedSyntaxJs: string[] = [
+  'ForInStatement',
+  'FunctionDeclaration',
+  'LabeledStatement',
+  'WithStatement',
+];
 
 export const javascript = (): Config[] => [
   { ...configJs.configs.recommended, name: 'sarast/js/recommended' },
@@ -12,7 +16,7 @@ export const javascript = (): Config[] => [
     languageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.es2021,
+        ...globals.es2026,
         ...globals.node,
       },
       parserOptions: {
@@ -51,8 +55,14 @@ export const javascript = (): Config[] => [
         },
       ],
       'no-unused-vars': 'off',
+      'no-useless-call': 'error',
+      'no-useless-computed-key': 'error',
+      'no-useless-constructor': 'error',
+      'no-useless-rename': 'error',
+      'no-var': 'error',
       'no-void': 'error',
       'object-shorthand': ['error', 'always', { avoidQuotes: true, ignoreConstructors: false }],
+      'one-var': ['error', { initialized: 'never' }],
       'prefer-arrow-callback': ['error', { allowNamedFunctions: false, allowUnboundThis: true }],
       'prefer-const': ['warn', { destructuring: 'all', ignoreReadBeforeAssign: true }],
       'prefer-exponentiation-operator': 'error',
@@ -62,7 +72,7 @@ export const javascript = (): Config[] => [
       'prefer-template': 'error',
       'require-await': 'error',
       'unicode-bom': ['error', 'never'],
-      'unused-imports/no-unused-imports': isInEditor ? 'off' : 'error',
+      'unused-imports/no-unused-imports': 'error',
       'unused-imports/no-unused-vars': ['error', { args: 'after-used', ignoreRestSiblings: true }],
       'use-isnan': ['error', { enforceForIndexOf: true, enforceForSwitchCase: true }],
       'valid-typeof': ['error', { requireStringLiterals: true }],

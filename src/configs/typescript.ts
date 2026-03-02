@@ -1,10 +1,12 @@
+import { defineConfig } from 'eslint/config';
+
 import { GLOB_JS, GLOB_TS, GLOB_TSX } from '../globs';
 import { tseslint } from '../plugins';
 import type { Rules } from '../typegen';
 import type { Config } from '../types';
 import { restrictedSyntaxJs } from './javascript';
 
-export const typescriptCore = tseslint.config({
+export const typescriptCore: Config[] = defineConfig({
   extends: [...tseslint.configs.recommended],
   files: [GLOB_TS, GLOB_TSX],
   name: 'sarast/typescript',
@@ -21,7 +23,7 @@ export const typescriptCore = tseslint.config({
       'error',
       { disallowTypeAnnotations: false, fixStyle: 'inline-type-imports' },
     ],
-    '@typescript-eslint/method-signature-style': ['error', 'property'], // https://www.totaltypescript.com/method-shorthand-syntax-considered-harmful
+    '@typescript-eslint/method-signature-style': ['error', 'property'],
     '@typescript-eslint/no-empty-object-type': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-import-type-side-effects': 'error',
@@ -39,13 +41,13 @@ export const typescriptCore = tseslint.config({
 
     // handled by unused-imports/no-unused-imports
     '@typescript-eslint/no-unused-vars': 'off',
-
+    '@typescript-eslint/no-useless-constructor': 'error',
     '@typescript-eslint/prefer-as-const': 'warn',
     '@typescript-eslint/prefer-literal-enum-member': ['error', { allowBitwiseExpressions: true }],
 
     'no-restricted-syntax': ['error', ...restrictedSyntaxJs, 'TSEnumDeclaration[const=true]'],
   } satisfies Rules,
-}) as Config[];
+});
 
 export const typescript = (): Config[] => [
   ...typescriptCore,

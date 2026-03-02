@@ -1,16 +1,21 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "baseUrl": ".",
-    "module": "esnext",
+    "lib": ["esnext"],
+    "moduleDetection": "force",
+    "module": "preserve",
     "moduleResolution": "bundler",
+    "resolveJsonModule": true,
     "types": ["node"],
     "strict": true,
     "noUnusedLocals": true,
     "declaration": true,
     "noEmit": true,
     "esModuleInterop": true,
+    "isolatedDeclarations": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
     "skipLibCheck": true
   },
-  "include": ["**/*.ts"]
+  "include": ["src"]
 }
