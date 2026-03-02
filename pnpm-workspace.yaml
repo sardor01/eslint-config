@@ -6,6 +6,7 @@ minimumReleaseAgeExclude:
   - '@eslint-community/eslint-plugin-eslint-comments'
   - eslint-plugin-de-morgan
   - globals
+  - publint
 
 overrides:
   is-core-module: 'npm:@no-shims/is-core-module'
